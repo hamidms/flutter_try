@@ -14,16 +14,36 @@ class P002 extends StatelessWidget {
                 elevation: 0,
                 backgroundColor: Colors.white,
                 bottom: PreferredSize(
-                  preferredSize: Size(400, 300),
+                  preferredSize: Size(MediaQuery.of(context).size.width, 100),
                   child: Container(
-                    color: Colors.blue,
-                    height: 300,
+                    color: Colors.white,
+                    height: 100,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: <Widget>[
                         Container(
                           height: 50,
-                          child: Placeholder(),
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children: <Widget>[
+                              Text("Today",
+                                  style: TextStyle(
+                                      fontSize: 30,
+                                      fontWeight: FontWeight.w800)),
+                              Container(
+                                width: 50,
+                                height: 50,
+                                child: CircleAvatar(
+                                  child: Center(
+                                    child: Image.network(
+                                        "https://cdn.pixabay.com/photo/2015/01/08/18/29/entrepreneur-593358__340.jpg"),
+                                  ),
+                                  // backgroundImage: NetworkImage(
+                                  //     "https://cdn.pixabay.com/photo/2015/01/08/18/29/entrepreneur-593358__340.jpg"),
+                                ),
+                              )
+                            ],
+                          ),
                         ),
                         Padding(
                           padding: EdgeInsets.only(right: 100),
